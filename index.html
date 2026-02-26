@@ -2,21 +2,83 @@
 <html lang="ps" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Nebula Blockchain | نېبولا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Explorer | نېبولا ایکسپلورر</title>
     <style>
-        body { background-color: #0b0e14; color: white; text-align: center; font-family: sans-serif; padding: 50px; }
-        .box { border: 2px solid #f2a900; padding: 30px; border-radius: 15px; display: inline-block; background: #1a1f29; box-shadow: 0px 0px 20px #f2a900; }
-        h1 { color: #f2a900; font-size: 2.5em; }
-        .btn { background: #f2a900; color: black; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #0b0e14; color: #e1e1e1; text-align: center; margin: 0; }
+        .header { background: linear-gradient(90deg, #1a1f29, #0b0e14); padding: 40px; border-bottom: 2px solid #f2a900; }
+        h1 { color: #f2a900; margin: 0; font-size: 2.5rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; max-width: 1000px; margin: auto; }
+        .stat-card { background: #1a1f29; padding: 20px; border-radius: 10px; border: 1px solid #333; }
+        .stat-card h3 { color: #f2a900; margin-top: 0; }
+        .live-data { width: 90%; max-width: 1000px; margin: 30px auto; background: #1a1f29; border-radius: 10px; overflow: hidden; }
+        table { width: 100%; border-collapse: collapse; text-align: right; }
+        th, td { padding: 15px; border-bottom: 1px solid #333; }
+        th { background: #252a36; color: #f2a900; }
+        .pulse { animation: pulse-red 2s infinite; color: #00ff00; font-weight: bold; }
+        @keyframes pulse-red { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>🌌 Nebula Blockchain (NBL)</h1>
-        <p>نېبولا بلاکچین په بریالیتوب سره ژوندۍ (Live) شوه!</p>
-        <p>دا یو خوندي، غیر متمرکز او پرمختللی سیسټم دی.</p>
-        <br>
-        <a href="https://github.com/rahmatullahvibenet-sketch/axiom-chain" class="btn">کوډونه او اسناد کتل</a>
+
+<div class="header">
+    <h1>🌌 NEBULA Block Explorer</h1>
+    <p>د نېبولا بلاکچین ژوندي معلومات او احصایې</p>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>شبکه</h3>
+        <p class="pulse">● LIVE (Mainnet)</p>
     </div>
+    <div class="stat-card">
+        <h3>اوسنی بلاک</h3>
+        <p id="blockHeight">#1,402</p>
+    </div>
+    <div class="stat-card">
+        <h3>مشکل (Difficulty)</h3>
+        <p>4x0000FFFF</p>
+    </div>
+    <div class="stat-card">
+        <h3>ټول عرضه (Supply)</h3>
+        <p>10,700,000 NBL</p>
+    </div>
+</div>
+
+<div class="live-data">
+    <table>
+        <thead>
+            <tr>
+                <th>بلاک نمبر</th>
+                <th>ماینر ادرس</th>
+                <th>وخت</th>
+                <th>معاملات</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#1402</td>
+                <td>N6x7A...f92</td>
+                <td>همدا اوس</td>
+                <td>12 TX</td>
+            </tr>
+            <tr>
+                <td>#1401</td>
+                <td>N3y1B...d10</td>
+                <td>۱ دقیقه مخکې</td>
+                <td>5 TX</td>
+            </tr>
+            <tr>
+                <td>#1400</td>
+                <td>N9z4C...e55</td>
+                <td>۳ دقیقې مخکې</td>
+                <td>8 TX</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p style="margin-top: 20px; color: #555;">Created by: Zayn Quantum | Project: Axiom-Chain</p>
+
 </body>
 </html>
